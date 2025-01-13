@@ -11,6 +11,7 @@ packages:
     - 'ripgrep'
     - 'tldr'
     - 'mise'
+    - 'xh'
     casks:
     - 'wezterm'
     - 'discord'
@@ -20,3 +21,4 @@ packages:
     - 'eqmac'
     - 'rectangle'
     - 'alfred'
+    - 'docker'
