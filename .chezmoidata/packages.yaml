@@ -1,0 +1,22 @@
+packages:
+  darwin:
+    brews:
+    - 'eza'
+    - 'helix'
+    - 'broot'
+    - 'fish'
+    - 'zoxide'
+    - 'starship'
+    - 'mcfly'
+    - 'ripgrep'
+    - 'tldr'
+    - 'mise'
+    casks:
+    - 'wezterm'
+    - 'discord'
+    - 'spotify'
+    - 'anytype'
+    - 'arc'
+    - 'eqmac'
+    - 'rectangle'
+    - 'alfred'

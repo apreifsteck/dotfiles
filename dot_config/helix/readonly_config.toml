@@ -1,0 +1,32 @@
+theme = "onedark"
+[editor]
+auto-save = true
+bufferline = "always"
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.statusline]
+center = ["version-control"]
+
+[keys]
+[keys.insert.t]
+g = "normal_mode"
+
+[keys.normal]
+C-e = "goto_next_buffer"
+C-n = "goto_previous_buffer"
+C-w = ":bc"
+J = "search_prev"
+e = "move_line_up"
+j = "search_next"
+n = "move_line_down"
+
+[keys.select]
+e = "extend_line_up"
+n = "extend_line_down"
