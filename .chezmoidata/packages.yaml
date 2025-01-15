@@ -22,3 +22,4 @@ packages:
     - 'rectangle'
     - 'alfred'
     - 'docker'
+    - 'slack'

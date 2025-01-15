@@ -26,8 +26,8 @@ status is-interactive; and begin
 
     # Aliases
     alias ls eza
-    alias kubectl k
-    alias chezmoi chez
+    alias k kubectl
+    alias chez chezmoi
 
     # Interactive shell initialisation
     /nix/store/ga9pan2qnxh4g79vn3648akcy61ppbbd-zoxide-0.9.4/bin/zoxide init fish | source
