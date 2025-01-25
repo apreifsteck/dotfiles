@@ -30,8 +30,6 @@ status is-interactive; and begin
     alias chez chezmoi
 
     # Interactive shell initialisation
-    fish_add_path ~/.local/share/mise/installs
-
     /nix/store/ga9pan2qnxh4g79vn3648akcy61ppbbd-zoxide-0.9.4/bin/zoxide init fish | source
 
     if test "$TERM" != dumb
