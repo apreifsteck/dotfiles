@@ -12,6 +12,7 @@ packages:
     - 'tldr'
     - 'mise'
     - 'xh'
+    - 'gitui'
     casks:
     - 'wezterm'
     - 'discord'
@@ -23,3 +24,4 @@ packages:
     - 'alfred'
     - 'docker'
     - 'slack'
+    - 'httpie'
