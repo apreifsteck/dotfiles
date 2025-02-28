@@ -1,5 +1,8 @@
 # This is Git's per-user configuration file.
 [user]
 # Please adapt and uncomment the following lines:
-#	name = Austin Reifsteck
-#	email = austinreifsteck@Austins-MacBook-Pro.local
+	name = Austin Reifsteck
+	email = apreifsteck@gmail.com
+[alias]
+st = status
+c = commit -m
