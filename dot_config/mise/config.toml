@@ -1,3 +1,5 @@
 [tools]
 kubectl = "latest"
 minikube = "latest"
+k9s = "latest"
+helm = "latest"
