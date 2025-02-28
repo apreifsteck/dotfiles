@@ -5,6 +5,9 @@
 set -q __fish_home_manager_config_sourced; and exit
 set -g __fish_home_manager_config_sourced 1
 
+# Set default editor to helix
+set -gx EDITOR hx
+
 status is-login; and begin
 
     # Login shell initialisation
