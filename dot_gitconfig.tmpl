@@ -1,8 +1,12 @@
 # This is Git's per-user configuration file.
 [user]
-# Please adapt and uncomment the following lines:
-	name = Austin Reifsteck
-	email = apreifsteck@gmail.com
+name = Austin Reifsteck
+{{- if eq .chezmoi.hostname .work_hostname }}
+email = {{.work_email}}
+{{- else if eq .chezmoi.hostname .personal_hostname }}
+email = {{.personal_email}}
+{{- end}}
 [alias]
 st = status
 c = commit -m
+sw = switch

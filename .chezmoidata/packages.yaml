@@ -29,3 +29,14 @@ packages:
     - 'docker'
     - 'slack'
     - 'httpie'
+    - 'dbeaver-community'
+work_packages:
+  darwin:
+    brews:
+    casks:
+      - 'notion'
+personal_packages:
+  darwin:
+    brews:
+    casks:
+      - 'freecad'
