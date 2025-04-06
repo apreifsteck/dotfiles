@@ -6,6 +6,7 @@ packages:
     - 'fish'
     - 'gitui'
     - 'helix'
+    - 'helm'
     - 'k9s'
     - 'kubectl'
     - 'minikube'
