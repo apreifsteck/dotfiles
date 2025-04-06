@@ -35,6 +35,7 @@ work_packages:
       - 'ghostscript'
       - 'libyaml'
       - 'redis'
+      - 'withgraphite/tap/graphite'
     casks:
       - 'notion'
 personal_packages:
