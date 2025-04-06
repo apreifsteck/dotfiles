@@ -1,0 +1,3 @@
+{{- if ne .chezmoi.hostname .work_hostname}}
+~/.config/fish/completions/gt.fish
+{{- end }}
