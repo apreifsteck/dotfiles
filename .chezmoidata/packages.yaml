@@ -19,7 +19,6 @@ packages:
     - 'zoxide'
     casks:
     - 'wezterm'
-    - 'discord'
     - 'spotify'
     - 'anytype'
     - 'arc'
@@ -33,6 +32,9 @@ packages:
 work_packages:
   darwin:
     brews:
+      - 'ghostscript'
+      - 'libyaml'
+      - 'redis'
     casks:
       - 'notion'
 personal_packages:
@@ -40,3 +42,4 @@ personal_packages:
     brews:
     casks:
       - 'freecad'
+      - 'discord'

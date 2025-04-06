@@ -1,6 +1,3 @@
-# ~/.config/fish/config.fish: DO NOT EDIT -- this file has been generated
-# automatically by home-manager.
-
 # Only execute this file once per shell.
 set -q __fish_home_manager_config_sourced; and exit
 set -g __fish_home_manager_config_sourced 1
@@ -17,7 +14,7 @@ end
 status is-interactive; and begin
 
     # path modifications
-    {{- if eq .chezmoi.hostname "work-laptop" }}
+    {{- if eq .chezmoi.hostname .work_hostname }}
     
     {{- end }}
 
@@ -36,7 +33,7 @@ status is-interactive; and begin
     mcfly init fish | source
 
     # work-specific initializations
-    {{- if eq .chezmoi.hostname "work-laptop" }}
+    {{- if eq .chezmoi.hostname .work_hostname }}
     
     {{- end }}
     
@@ -50,4 +47,7 @@ status is-interactive; and begin
         set fish_complete_path $prev "/Users/austinreifsteck/.local/share/fish/home-manager_generated_completions" $post
     end
 
+    {{- if eq .chezmoi.hostname .work_hostname }}
+    ulimit -S -n 2048
+    {{- end }}
 end

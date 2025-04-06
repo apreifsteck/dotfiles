@@ -2,6 +2,12 @@
 #!/bin/bash
 
 brew bundle --file=/dev/stdin <<EOF
+{{ if eq .chezmoi.hostname .work_hostname }}
+	{{- range .work_packages.darwin.brews -}}
+brew {{ . | quote }}
+{{ end -}}
+{{ end -}}
+
 {{ if eq .chezmoi.hostname .personal_hostname }}
 	{{- range .personal_packages.darwin.brews -}}
 brew {{ . | quote }}
