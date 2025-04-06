@@ -31,7 +31,7 @@ cask {{ . | quote }}
 {{ if eq .chezmoi.hostname .work_hostname }}
 	{{- range .work_packages.darwin.casks -}}
 cask {{ . | quote }}
-	{{ end -}}
 {{ end -}}
+{{- end -}}
 EOF
 {{ end -}}

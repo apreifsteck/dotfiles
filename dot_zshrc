@@ -70,3 +70,5 @@ autoload -U +X bashcompinit && bashcompinit
 
 eval "$(starship init zsh)"
 fish
+
+source $HOME/.config/broot/launcher/bash/br
