@@ -3,12 +3,22 @@
 	name = Austin Reifsteck
 	{{- if eq .chezmoi.hostname .work_hostname }}
 	email = {{.work_email}}
+	signingkey = {{ onepasswordRead "op://Employee/GitHub Work/public key"}}
 	{{- else if eq .chezmoi.hostname .personal_hostname }}
 	email = {{.personal_email}}
+	signingkey = {{ onepasswordRead "op://Personal/Github SSH Key/public key"}}
 	{{- end}}
 [alias]
 	st = status
 	c = commit -m
 	sw = switch
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	{{ if eq .chezmoi.os "darwin" -}}
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+	{{- end }}
+[commit]
+	gpgsign = true
 [push]
 	autoSetupRemote = true
