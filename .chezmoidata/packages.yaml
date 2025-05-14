@@ -36,6 +36,8 @@ work_packages:
       - 'libyaml'
       - 'redis'
       - 'withgraphite/tap/graphite'
+      - 'kubectx'
+      - 'fzf'
     casks:
       - 'notion'
 personal_packages:

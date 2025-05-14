@@ -50,4 +50,10 @@ status is-interactive; and begin
     {{- if eq .chezmoi.hostname .work_hostname }}
     ulimit -S -n 2048
     {{- end }}
+
+    {{- if eq .chezmoi.hostname .work_hostname }}
+    function fish_greeting
+        task ls
+    end
+    {{- end }}
 end
