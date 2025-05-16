@@ -1,0 +1,13 @@
+# [[language]]
+# name = "elixir"
+# scope = "source.elixir"
+# language-servers = [{ name = "elixir-language-server", command = "nextls", args = ["--stdio=true"] }]
+#
+[language-server.nextls]
+command = "nextls"
+args = ["--stdio=true"]
+
+[[language]]
+name = "elixir"
+scope = "source.elixir"
+language-servers = ["nextls"]
