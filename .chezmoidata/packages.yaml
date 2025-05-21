@@ -1,6 +1,5 @@
 packages:
-  darwin:
-    brews:
+  common: &id001
     - 'broot'
     - 'eza'
     - 'fish'
@@ -14,9 +13,11 @@ packages:
     - 'mise'
     - 'ripgrep'
     - 'starship'
-    - 'tldr'
+    - 'tealdeer'
     - 'xh'
     - 'zoxide'
+  darwin:
+    brews: *id001
     casks:
     - 'wezterm'
     - 'spotify'
@@ -29,6 +30,25 @@ packages:
     - 'slack'
     - 'httpie'
     - 'dbeaver-community'
+  linux:
+    pacman:
+      - yay
+      - flatpak
+      - cachyos-gaming-meta
+      - cachyos-gaming-applications
+    flatpak:
+      - com.spotify.Client
+      - io.anytype.anytype
+      - io.httpie.Httpie
+      - com.slack.Slack
+      - org.torproject.torbrowser-launcher
+    yay:
+      - steam
+      - freecad
+      - dbeaver
+      - discord
+      - wezterm
+      - 1password-cli
 work_packages:
   darwin:
     brews:

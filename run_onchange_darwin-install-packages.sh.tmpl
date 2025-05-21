@@ -35,3 +35,12 @@ cask {{ . | quote }}
 {{- end -}}
 EOF
 {{ end -}}
+
+{{ if eq .chezmoi.os "linux" -}}
+#!/usr/bin/fish
+sudo pacman -S --needed {{ range concat .packages.linux.pacman .packages.common}} {{. }}{{end}}
+yay -S --needed {{- range .packages.linux.yay }} {{.}}{{end}}
+{{- range .packages.linux.flatpak}}
+flatpak install flathub {{.}}
+{{end}}
+{{ end }}

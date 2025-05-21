@@ -4,7 +4,7 @@
 	{{- if eq .chezmoi.hostname .work_hostname }}
 	email = {{.work_email}}
 	signingkey = {{ onepasswordRead "op://Employee/GitHub Work/public key"}}
-	{{- else if eq .chezmoi.hostname .personal_hostname }}
+	{{- else if (or (eq .chezmoi.hostname .personal_hostname) (eq .chezmoi.hostname .linux_hostname))}}
 	email = {{.personal_email}}
 	signingkey = {{ onepasswordRead "op://Personal/Github SSH Key/public key"}}
 	{{- end}}
