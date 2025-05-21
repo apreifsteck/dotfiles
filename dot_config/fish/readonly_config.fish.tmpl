@@ -3,11 +3,11 @@ set -q __fish_home_manager_config_sourced; and exit
 set -g __fish_home_manager_config_sourced 1
 
 # Set default editor to helix
-{{- if eq .chezmoi.os "linux" -}}
+{{ if eq .chezmoi.os "linux" }}
 set -gx EDITOR helix
-{{- else -}}
+{{ else }}
 set -gx EDITOR hx
-{{- end -}}
+{{ end }}
 
 status is-login; and begin
 
