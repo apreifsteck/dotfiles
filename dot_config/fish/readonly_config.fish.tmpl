@@ -29,6 +29,11 @@ status is-interactive; and begin
     alias k kubectl
     alias chez chezmoi
 
+    {{ if eq .chezmoi.os "linux" }}
+    alias hx helix
+    {{ end }}
+    
+
     # ~/.config/fish/config.fish
 
     # initializations

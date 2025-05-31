@@ -5,6 +5,7 @@ config.color_scheme = 'Butrin (Gogh)'
 config.font_size = 12.0
 config.keys = {
   {mods="SUPER", key="Enter", action=wezterm.action.SplitHorizontal { domain = 'CurrentPaneDomain' }},
+  {mods="SUPER", key="v", action=wezterm.action.PasteFrom "Clipboard" },
   {mods="SUPER|SHIFT", key="Enter", action=wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' }},
   {mods="CTRL|SHIFT", key="e", action=wezterm.action.ActivatePaneDirection "Right" },
   {mods="CTRL|SHIFT", key="n", action=wezterm.action.ActivatePaneDirection "Left" },
