@@ -20,6 +20,7 @@ status is-interactive; and begin
     # path modifications
     {{- if eq .chezmoi.hostname .work_hostname }}
     fish_add_path $HOME/bin/
+    fish_add_path $(python3 -m site --user-base)/bin/
     {{- end }}
 
     # Abbreviations
