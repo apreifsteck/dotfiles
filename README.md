@@ -8,6 +8,8 @@ use multiple github accounts
 gitconfig
 - See if you can get a way to save your zen settings by default
 
+test
+
 ## Things to note for Linux
 - You configure how your tiling is done in system settings -> shortcuts -> kwin
 - You configure copy paste stuff in system settings -> shortcuts -> file 
