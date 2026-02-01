@@ -13,4 +13,20 @@ config.keys = {
   {mods="SUPER|SHIFT", key="e", action=wezterm.action.ActivateTabRelative(1) }
 }
 
+config.mouse_bindings = {
+  -- Slower scroll up/down (3 lines instead of Page Up/Down)
+  {
+    event = { Down = { streak = 1, button = { WheelUp = 1 } } },
+    mods = 'NONE',
+    action = wezterm.action.ScrollByLine(-3),
+    alt_screen = false,
+  },
+  {
+    event = { Down = { streak = 1, button = { WheelDown = 1 } } },
+    mods = 'NONE',
+    action = wezterm.action.ScrollByLine(3),
+    alt_screen = false,
+  },
+}
+
 return config

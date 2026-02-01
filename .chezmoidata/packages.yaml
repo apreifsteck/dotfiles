@@ -49,6 +49,7 @@ packages:
       - discord
       - wezterm
       - 1password-cli
+      - syncthing
 work_packages:
   darwin:
     brews:
