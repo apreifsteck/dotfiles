@@ -1,13 +1,15 @@
-# [[language]]
-# name = "elixir"
-# scope = "source.elixir"
-# language-servers = [{ name = "elixir-language-server", command = "nextls", args = ["--stdio=true"] }]
-#
 [language-server.nextls]
 command = "nextls"
 args = ["--stdio=true"]
 
+[language-server.expert]
+command = "~/.local/bin/expert_darwin_amd64"
+
 [[language]]
 name = "elixir"
 scope = "source.elixir"
-language-servers = ["nextls"]
+language-servers = ["elixir-ls"]
+
+[[language]]
+name = "heex"
+language-servers = ["expert"]
