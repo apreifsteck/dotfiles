@@ -3,3 +3,45 @@ kubectl = "latest"
 minikube = "latest"
 k9s = "latest"
 helm = "latest"
+
+[tasks.pr]
+description = "Create a GitHub PR with a description built from conventional commits"
+usage = '''
+arg "[base]" help="Base branch to compare against" default="main"
+flag "--dry-run" help="Print the PR description without pushing"
+'''
+run = '''
+#!/usr/bin/env bash
+set -euo pipefail
+
+base="${usage_base?}"
+
+# Title: humanize the branch name
+branch=$(git branch --show-current)
+title=$(echo "$branch" | sed 's|^.*/||; s/[-_]/ /g' | awk '{print toupper(substr($0,1,1)) substr($0,2)}')
+
+# What: bulleted list of conventional commit descriptions (strip type/scope prefix)
+what=$(git log --pretty=format:'%s' "$base"..HEAD | sed 's/^[a-z!]*\(([^)]*)\)\?: //' | sed 's/^/- /')
+if [ -z "$what" ]; then
+  echo "No commits found between $base and HEAD"
+  exit 1
+fi
+
+# Why: body of each conventional commit separated by line breaks
+why=$(git log --pretty=format:'%b' "$base"..HEAD | sed '/^$/d')
+
+body="### What
+${what}
+
+### Why
+${why}"
+
+if [ "${usage_dry_run:-false}" = "true" ]; then
+  echo "Title: $title"
+  echo ""
+  echo "$body"
+else
+  git push -u origin HEAD
+  gh pr create --title "$title" --body "$body"
+fi
+'''
