@@ -9,6 +9,7 @@ description = "Create a GitHub PR with a description built from conventional com
 usage = '''
 arg "[base]" help="Base branch to compare against" default="main"
 flag "--dry-run" help="Print the PR description without pushing"
+flag "--draft" help="Create the PR as a draft"
 '''
 run = '''
 #!/usr/bin/env bash
@@ -42,6 +43,10 @@ if [ "${usage_dry_run:-false}" = "true" ]; then
   echo "$body"
 else
   git push -u origin HEAD
-  gh pr create --title "$title" --body "$body"
+  draft_flag=""
+  if [ "${usage_draft:-false}" = "true" ]; then
+    draft_flag="--draft"
+  fi
+  gh pr create --title "$title" --body "$body" $draft_flag
 fi
 '''
