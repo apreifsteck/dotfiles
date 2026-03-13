@@ -10,6 +10,7 @@ usage = '''
 arg "[base]" help="Base branch to compare against" default="main"
 flag "--dry-run" help="Print the PR description without pushing"
 flag "--draft" help="Create the PR as a draft"
+flag "--why <why>" help="Override the why section (from commit bodies) with custom text"
 '''
 run = '''
 #!/usr/bin/env bash
@@ -22,14 +23,18 @@ branch=$(git branch --show-current)
 title=$(echo "$branch" | sed 's|^.*/||; s/[-_]/ /g' | awk '{print toupper(substr($0,1,1)) substr($0,2)}')
 
 # What: bulleted list of conventional commit descriptions (strip type/scope prefix)
-what=$(git log --pretty=format:'%s' "$base"..HEAD | sed 's/^[a-z!]*\(([^)]*)\)\?: //' | sed 's/^/- /')
+what=$(git log --pretty=format:'%s' "$base"..HEAD | tail -r | sed 's/^[a-z!]*\(([^)]*)\)\?: //' | sed 's/^/- /')
 if [ -z "$what" ]; then
   echo "No commits found between $base and HEAD"
   exit 1
 fi
 
-# Why: body of each conventional commit separated by line breaks
-why=$(git log --pretty=format:'%b' "$base"..HEAD | sed '/^$/d')
+# Why: use --why flag if provided, otherwise body of each conventional commit
+if [ -n "${usage_why:-}" ]; then
+  why="$usage_why"
+else
+  why=$(git log --pretty=format:'%b' "$base"..HEAD | sed '/^$/d')
+fi
 
 body="### What
 ${what}
