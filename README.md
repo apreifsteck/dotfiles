@@ -8,6 +8,11 @@ use multiple github accounts
 gitconfig
 - See if you can get a way to save your zen settings by default
 
+## Manual setup steps
+1. Install 1password
+2. set the hostname chezmoi expects with `sudo hostnamectl set-hostname austin-arch`
+3. keyboard key repeat delay: 300ms, rate: 40 repeats/s
+
 ## Things to note for Linux
 - You configure how your tiling is done in system settings -> shortcuts -> kwin
 - You configure copy paste stuff in system settings -> shortcuts -> file 
