@@ -36,6 +36,7 @@ packages:
       - flatpak
       - cachyos-gaming-meta
       - cachyos-gaming-applications
+      - zen-browser-bin
     flatpak:
       - com.spotify.Client
       - io.anytype.anytype
