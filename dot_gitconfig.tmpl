@@ -6,7 +6,7 @@
 	signingkey = {{ onepasswordRead "op://Employee/GitHub Work/public key"}}
 	{{- else if (or (eq .chezmoi.hostname .personal_hostname) (eq .chezmoi.hostname .linux_hostname))}}
 	email = {{.personal_email}}
-	signingkey = {{ onepasswordRead "op://Personal/Github SSH Key/public key"}}
+	signingkey = {{ (bitwarden "item" "Test key").sshKey.publicKey }}
 	{{- end}}
 [alias]
 	st = status
