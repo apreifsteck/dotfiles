@@ -14,6 +14,7 @@ gitconfig
 3. keyboard key repeat delay: 300ms, rate: 40 repeats/s
 4. install the bitwarden standalone CLI tool
 
+
 ## Things to note for Linux
 - You configure how your tiling is done in system settings -> shortcuts -> kwin
 - You configure copy paste stuff in system settings -> shortcuts -> file 
