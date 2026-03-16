@@ -18,9 +18,9 @@ end
 
 status is-interactive; and begin
 
+    fish_add_path $HOME/bin/
     # path modifications
     {{- if eq .chezmoi.hostname .work_hostname }}
-    fish_add_path $HOME/bin/
     fish_add_path $(python3 -m site --user-base)/bin/
     {{- end }}
 
@@ -33,7 +33,6 @@ status is-interactive; and begin
 
     {{ if eq .chezmoi.os "linux" }}
     alias hx helix
-    alias bw "flatpak run --command=bw com.bitwarden.desktop"
     {{ end }}
     
 

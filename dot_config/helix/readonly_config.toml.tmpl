@@ -2,6 +2,9 @@ theme = "onedark"
 [editor]
 auto-save = true
 bufferline = "always"
+{{ if eq .chezmoi.os "linux" }}
+clipboard-provider = "wayland"
+{{ end }}
 
 [editor.cursor-shape]
 insert = "bar"

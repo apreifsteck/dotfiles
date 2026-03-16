@@ -12,6 +12,7 @@ gitconfig
 1. Install 1password
 2. set the hostname chezmoi expects with `sudo hostnamectl set-hostname austin-arch`
 3. keyboard key repeat delay: 300ms, rate: 40 repeats/s
+4. install the bitwarden standalone CLI tool
 
 ## Things to note for Linux
 - You configure how your tiling is done in system settings -> shortcuts -> kwin
