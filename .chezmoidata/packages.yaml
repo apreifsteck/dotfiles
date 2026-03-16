@@ -43,6 +43,7 @@ packages:
       - io.httpie.Httpie
       - com.slack.Slack
       - org.torproject.torbrowser-launcher
+      - com.bitwarden.desktop
     yay:
       - steam
       - freecad
