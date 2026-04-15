@@ -21,3 +21,5 @@ use multiple github accounts
 - https://www.reddit.com/r/linux_gaming/comments/11yp7ig/pipewire_audio_stuttering_when_playing_games_or/
   - This one seems to have fixed it. I did this and then restarted my computer, played 2 rounds of rocket league training without
   hearing anything.
+  - Later, I haven't had this issue. Did factory reset my computer once though
+  - [followed](https://discuss.cachyos.org/t/no-printer-option-in-settings/9163) for printer setup
