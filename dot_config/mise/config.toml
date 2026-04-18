@@ -3,6 +3,7 @@ kubectl = "latest"
 minikube = "latest"
 k9s = "latest"
 helm = "latest"
+usage = "latest"
 
 [tasks.pr]
 description = "Create a GitHub PR with a description built from conventional commits"
