@@ -9,6 +9,8 @@ config.keys = {
   {mods="SUPER|SHIFT", key="Enter", action=wezterm.action.SplitVertical { domain = 'CurrentPaneDomain' }},
   {mods="CTRL|SHIFT", key="e", action=wezterm.action.ActivatePaneDirection "Right" },
   {mods="CTRL|SHIFT", key="n", action=wezterm.action.ActivatePaneDirection "Left" },
+  {mods="CTRL|SHIFT", key="k", action=wezterm.action.ActivatePaneDirection "Down" },
+  {mods="CTRL|SHIFT", key="y", action=wezterm.action.ActivatePaneDirection "Up" },
   {mods="SUPER|SHIFT", key="n", action=wezterm.action.ActivateTabRelative(-1) },
   {mods="SUPER|SHIFT", key="e", action=wezterm.action.ActivateTabRelative(1) }
 }
