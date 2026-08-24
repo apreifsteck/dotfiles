@@ -4,6 +4,9 @@ minikube = "latest"
 k9s = "latest"
 helm = "latest"
 usage = "latest"
+node = "latest"
+ollama = "latest"
+rust = "latest"
 
 [tasks.pr]
 description = "Create a GitHub PR with a description built from conventional commits"

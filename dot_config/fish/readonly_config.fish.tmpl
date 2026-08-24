@@ -24,6 +24,10 @@ status is-interactive; and begin
     fish_add_path $(python3 -m site --user-base)/bin/
     {{- end }}
 
+    {{- if eq .chezmoi.hostname .linux_hostname}}
+    fish_add_path $HOME/.local/bin
+    {{- end }}
+
     # Abbreviations
 
     # Aliases

@@ -5,6 +5,10 @@ args = ["--stdio=true"]
 [language-server.expert]
 command = "~/.local/bin/expert_darwin_amd64"
 
+[language-server.cooklang-lsp]
+command = "cook"
+args = ["lsp"]
+
 [[language]]
 name = "elixir"
 scope = "source.elixir"
@@ -13,3 +17,10 @@ language-servers = ["elixir-ls"]
 [[language]]
 name = "heex"
 language-servers = ["expert"]
+
+[[language]]
+name = "cook"
+scope = "source.cook"
+file-types = ["cook"]
+language-servers = ["cooklang-lsp"]
+
