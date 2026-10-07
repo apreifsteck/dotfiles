@@ -1,6 +1,7 @@
 packages:
   common: &id001
     - 'broot'
+    - 'docker'
     - 'eza'
     - 'fish'
     - 'gitui'
@@ -26,7 +27,6 @@ packages:
     - 'eqmac'
     - 'rectangle'
     - 'alfred'
-    - 'docker'
     - 'slack'
     - 'httpie'
     - 'dbeaver-community'
@@ -37,6 +37,8 @@ packages:
       - cachyos-gaming-meta
       - cachyos-gaming-applications
       - zen-browser-bin
+      - 'docker-compose'
+      - 'docker-buildx'
     flatpak:
       - com.spotify.Client
       - io.anytype.anytype
@@ -50,19 +52,11 @@ packages:
       - dbeaver
       - discord
       - wezterm
-      - 1password-cli
       - syncthing
 work_packages:
   darwin:
     brews:
-      - 'ghostscript'
-      - 'libyaml'
-      - 'redis'
-      - 'withgraphite/tap/graphite'
-      - 'kubectx'
-      - 'fzf'
     casks:
-      - 'notion'
 personal_packages:
   darwin:
     brews:

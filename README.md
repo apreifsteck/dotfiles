@@ -32,3 +32,6 @@ mount point for my backup drive.
 - [followed](https://docs.syncthing.net/users/autostart.html#linux) to get syncthing automatically running
   - `systemctl enable syncthing@austinr.service`
   - `systemctl start syncthing@austinr.service`
+- occassionally run `paccache -r`. This deletes cached old versions of AUR packages
+  - On my first run of this I saved almost 18gb of space
+  

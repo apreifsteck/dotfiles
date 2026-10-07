@@ -6,7 +6,9 @@ helm = "latest"
 usage = "latest"
 node = "latest"
 ollama = "latest"
-rust = "latest"
+rust = {version = "latest", components = ["rust-analyzer"]}
+erlang = "latest"
+elixir = "latest"
 
 [tasks.pr]
 description = "Create a GitHub PR with a description built from conventional commits"
