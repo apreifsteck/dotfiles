@@ -24,3 +24,13 @@ scope = "source.cook"
 file-types = ["cook"]
 language-servers = ["cooklang-lsp"]
 
+# Note: Needs manual install of kotlin lsp
+# https://github.com/Kotlin/kotlin-lsp/releases
+
+[language-server.kotlin-lsp]
+command = "intellij-server"
+args = ["--stdio"]
+
+[[language]]
+name = "kotlin"
+language-servers = ["kotlin-lsp"]
